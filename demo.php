@@ -42,7 +42,9 @@
 
 
     //$search_response = $linkedin->search("?company-name=facebook&count=10");
-    $search_response = $linkedin->search("?title=software&count=10");
+    $search_response = $linkedin->search("?title=software&count=10&format=json");
+
+    var_dump($search_response);
 
     //echo $search_response;
     $xml = simplexml_load_string($search_response);
