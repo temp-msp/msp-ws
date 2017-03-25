@@ -62,7 +62,7 @@ class LinkedIn {
 
 	function getProfile($resource = "~")
 	{
-		$profile_url = $this->base_url . "/v1/people/" . $resource;
+		$profile_url = $this->base_url . "/v2/people/" . $resource;
 		$request = OAuthRequest::from_consumer_and_token($this->consumer, $this->access_token, "GET", $profile_url);
 		$request->sign_request($this->signature_method, $this->consumer, $this->access_token);
 		$auth_header = $request->to_header("https://api.linkedin.com"); # this is the realm
@@ -79,8 +79,8 @@ class LinkedIn {
 
 	function setStatus($status)
 	{
-		$profile_url = $this->base_url . "/v1/people/~";
-		$status_url = $this->base_url . "/v1/people/~/current-status";
+		$profile_url = $this->base_url . "/v2/people/~";
+		$status_url = $this->base_url . "/v2/people/~/current-status";
 		echo "Setting status...\n";
 		$xml = "<current-status>" . htmlspecialchars($status, ENT_NOQUOTES, "UTF-8") . "</current-status>";
 		echo $xml . "\n";
@@ -96,7 +96,7 @@ class LinkedIn {
 	# Example search("?count=10&start=10&company=LinkedIn");
 	function search($parameters)
 	{
-		$search_url = $this->base_url . "/v1/people-search:(people:(id,first-name,last-name,picture-url,site-standard-profile-request,headline),num-results)" . $parameters;
+		$search_url = $this->base_url . "/v2/people-search:(people:(id,first-name,last-name,picture-url,site-standard-profile-request,headline),num-results)" . $parameters;
 		//$search_url = $this->base_url . "/v1/people-search?keywords=facebook";
 
 		echo "Performing search for: " . $parameters . "<br />";
