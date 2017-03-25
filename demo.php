@@ -32,7 +32,7 @@
 
 
     # You now have a $linkedin->access_token and can make calls on behalf of the current member
-    $xml_response = $linkedin->getProfile("~:(id,first-name,last-name,public-profile-url)");
+    $xml_response = $linkedin->getProfile("~:(72024a111,azhary,arliansyah,https://www.linkedin.com/in/azhary-arliansyah-72024a111/)");
 
     echo '<pre>';
     echo 'My Profile Info';
