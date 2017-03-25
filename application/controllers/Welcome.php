@@ -22,4 +22,9 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('welcome_message');
 	}
+
+	public function LinkedinAPI()
+	{
+		echo file_get_contents("https://api.linkedin.com/v1/people/~?format=json");
+	}
 }
