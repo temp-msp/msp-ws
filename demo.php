@@ -1,8 +1,8 @@
 <?php
     session_start();
 
-    $config['base_url']             =   'http://msp-ws.azurewebsites.net/auth.php';
-    $config['callback_url']         =   'http://msp-ws.azurewebsites.net/demo.php';
+    $config['base_url']             =   'https://msp-ws.azurewebsites.net/auth.php';
+    $config['callback_url']         =   'https://msp-ws.azurewebsites.net/demo.php';
     $config['linkedin_access']      =   '81ifk17t24tz45';
     $config['linkedin_secret']      =   'jRb0VurH6m9vC4TR';
 

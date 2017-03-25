@@ -1,8 +1,8 @@
 <?php
     session_start();
 
-    $config['base_url']             =   'http://msp-ws.azurewebsites.net/auth.php';
-    $config['callback_url']         =   'http://msp-ws.azurewebsites.net/demo.php';
+    $config['base_url']             =   'https://msp-ws.azurewebsites.net/auth.php';
+    $config['callback_url']         =   'https://msp-ws.azurewebsites.net/demo.php';
     $config['linkedin_access']      =   '81ifk17t24tz45';
     $config['linkedin_secret']      =   'jRb0VurH6m9vC4TR';
 
@@ -10,7 +10,7 @@
 
     # First step is to initialize with your consumer key and secret. We'll use an out-of-band oauth_callback
     $linkedin = new LinkedIn($config['linkedin_access'], $config['linkedin_secret'], $config['callback_url'] );
-    //$linkedin->debug = true;
+    $linkedin->debug = true;
 
     # Now we retrieve a request token. It will be set as $linkedin->request_token
     $linkedin->getRequestToken();
