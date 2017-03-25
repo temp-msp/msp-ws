@@ -1,10 +1,10 @@
 <?php
     session_start();
 
-    $config['base_url']             =   'http://thinkdiff.net/demo/linkedin/auth.php';
-    $config['callback_url']         =   'http://thinkdiff.net/demo/linkedin/demo.php';
-    $config['linkedin_access']      =   '';
-    $config['linkedin_secret']      =   '';
+    $config['base_url']             =   'http://msp-ws.azurewebsites.net/auth.php';
+    $config['callback_url']         =   'http://msp-ws.azurewebsites.net/demo.php';
+    $config['linkedin_access']      =   '81ifk17t24tz45';
+    $config['linkedin_secret']      =   'jRb0VurH6m9vC4TR';
 
     include_once "linkedin.php";
    
